@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#03a9f4,#03a9f4 45%,#fff 45%,#fff 100%);
+}
+.sidebar{
+    width: 10%;
+}
+.sidebar ul li{
+    list-style: none;
+    position: relative;
+    width: 100%;
+    margin: 0  5px;
+    height: 3rem;
+    line-height: 50px;
+    border-radius: 12px;
+}
+.sidebar ul li a{
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: all 0,4s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: #11101d;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+.sidebar:active{
+    width: 200px;
+}
+
+.sidebar .log_content .log{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar:active .log_content .log{
+ opacity: 1;
+ pointer-events: none;
+}
+.sidebar .log_content .log i{
+    font-size: 25px;
+    margin-right: 10px;
+}
+.sidebar #btn{
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 0.6rem;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50px);
+}
+.sidebar:active #btn{
+    left: 90%;
+}
+.sidebar ul li .tooltip{
+    color: black;
+    font-weight: 10;
+    position: absolute;
+    left: 65px;
+    background: #fff;
+    top: 0;
+    height: 35px;
+    width: 70px;
+    transform: translateY(-50%,-50%);
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    line-height: 35px;
+    text-align: center;
+    transition: 0s;
+    /* /////hide opacity: 0;////// */
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+.sidebar.active ul li .tooltip{
+    display: none;
+}
+.sidebar ul li:hover .tooltip{
+    top: 50%;
+    transition: all 0.5s ease;
+    opacity: 1;
+    
+}
+
+.sidebar ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.sidebar ul li a:hover{
+    color: #11101d;
+    background-color: #fff;
+}
+.sidebar .links_name{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.sidebar:active .links_name{
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebar ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background-color: #1d1b31;
+    padding-left: 50px;
+    font-size: 18px;
+    color: #fff;
+}
+#btn2{
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    color: #fff;
+    font-size: 22px;
+    transition: all 0.4s ease;
+}
+.sidebar ul li #btn2:hover{
+    background: #fff;
+    color: #1d1b31;
+
+
+}
+.sidebar .profile_content{
+    position: absolute;
+    color: #fff;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.sidebar .profile_content .profile{
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background-color: #1d1b31;
+}
+img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.sidebar .profile_content .profile .profile_details{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.sidebar:active  .profile .profile_details{
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebar .profile_content .profile .profilr_details .jobbar{
+    margin-left: 10px;
+}
+.profile .profilr_details .jobbar .name{
+    font-size: 15px;
+    font-weight: 400;
+}
+.profile .profilr_details .jobbar .jobname{
+    font-size: 12px;
+}
+#log_out{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    border-radius: 12px;
+    text-align: center;
+}
+.sidebar:active #log_out{
+    left: 88%;
+}
+.sidebar:active ~ .home{
+    width: calc(100%-240px);
+    left: 240px;
+}
+/* ////////////////////////////////Dark mode/////////////////////////////////// */
+.them{
+    position: absolute;
+    top: 5px;
+   right: 15px;
+    display: flex;
+    /* background: red; */
+    margin: auto;
+}
+label{
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    right: 20px;
+    top: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+}
+label:before{
+    position: absolute;
+    content: '';
+    width:20px;
+    height: 20px;
+    left: 1px;
+    top: 1px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    align-items: center;
+    transition: 0.4s;
+}
+label.active:before{
+    left: 24px;
+    background: #fff;
+}
+body.night{
+    background: #000;
+    color: #fff;
+}
+.fa-moon{
+    color: #fff;
+}
+
+
+/* /////////////////////////////contact////////////////////// */
+.them1{
+    position: absolute;
+    top: 5px;
+    left: 200px;
+    display: flex;
+    /* background: red; */
+    margin: auto;
+}
+.label1{
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    right: 20px;
+    top: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+}
+.label1:before{
+    position: absolute;
+    content: '';
+    width:20px;
+    height: 20px;
+    left: 1px;
+    top: 1px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    align-items: center;
+    transition: 0.4s;
+}
+label1.active:before{
+    left: 24px;
+    background: #fff;
+}
+body.night{
+    background: #000;
+    color: #fff;
+}
+.fa-moon{
+    color: #fff;
+}
+/* ///////////////////////dark mode end////////////// */
+.card{
+    margin: auto;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    color: #fff;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+    left: 50px;
+}
+.card .img1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    transform: translateY(30px) scale(0.5);
+    transform-origin: top;
+}
+.card .img1 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.content{
+    color: #11101d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+}
+.content .name_Work h2{
+    color: #444;
+    margin-bottom: 10px;
+}
+.content .name_Work span{
+    color: #03a9f4;
+    font-size: 20px;
+    margin: 20%;
+}
+.content .name_Work .info{
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+}
+.content .name_Work .info li{
+    list-style: none;
+    margin: auto;
+    font-size: 22px;
+}
+.content .name_Work .info li a{
+    text-decoration: none;
+    border-radius: 50%;
+    background: transparent;
+    width:45px;
+    height:45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #444;
+    font-size: 1.5rem;
+    box-shadow: 0 7px 15px rgba(189, 166, 166, 0.1);
+    border-top: 1px solid rgba(0,0,0,0.5);
+    transition: 0.5s;
+}
+.name_Work .info li a:hover{
+    background: #03a9f4;
+    color: #fff;
+}
+/* //////////////////whatsapp////////////// */
+.content .whatsapp h2{
+    color: #444;
+    position: absolute;
+    top: 55%;
+    left: 25%;
+}
+.content .whatsapp h2{
+    position:relative ;
+    left: 0px;
+    top: -25px;
+    
+    justify-content: center;
+}
+.content .whatsapp span{
+    color: #03a9f4;
+    font-size: 25px;
+    position: relative;
+    top: -20px;
+    left: 0px;
+}
+.content .whatsapp .whatapp_icon{
+    margin: auto;
+    position:relative ;
+    left: 50px;
+    top: 0;
+}
+.content .whatsapp .whatapp_icon img{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    
+}
