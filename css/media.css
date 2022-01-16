@@ -1,0 +1,8 @@
+@media(max-width:500px){
+    body{
+        background-color: red;
+    }
+    .card{
+        width: 250px;
+    }
+}
