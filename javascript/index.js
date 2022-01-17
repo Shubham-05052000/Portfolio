@@ -16,3 +16,16 @@ darkMode.addEventListener('click', function(){
     darkMode.classList.toggle('active');
     content.classList.toggle('night');
 })
+
+
+//////////////////////heart contact///////////////////////
+const btn =document.querySelector("button");//post button
+const post =document.querySelector(".post");//post div
+const widget =document.querySelector(".star-widget");//satrt widget class 
+const editbtn =document.querySelector(".edit");//edit div 
+//functiom create..
+btn.onclick = () =>{
+    widget.style.display = "none";//button per click karna per sart div none hoo jaaya ga
+    post.style.display ="block";
+    return false;
+}
