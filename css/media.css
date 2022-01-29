@@ -2,6 +2,9 @@
     body{
         background-color: red;
     }
+    .navigation{
+        left: 30px;
+    }
     .card{
         width: 250px;
         padding: 30%;
