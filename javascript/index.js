@@ -1,13 +1,14 @@
-let btn =document.querySelector("#btn");
-let sidebar = document.querySelector(".siderbar");
-let btn2 = document.querySelector("#btn2");
+const list = document.querySelectorAll(".list");
 
-btn.onclick = function(){
-    sidebar.classList.toggle("active");
+function activeLink() {
+    list.forEach((item) =>
+    item.classList.remove("active"));
+    this.classList.add("active");
 }
-btn2.onclick = function(){
-    sidebar.classList.toggle("active");
-}
+
+list.forEach((item) =>
+item.addEventListener("click", activeLink));
+
 //////////////////dark maode/////////////
 
 var content = document.getElementsByClassName('body1')[0];

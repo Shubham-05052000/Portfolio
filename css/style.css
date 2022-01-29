@@ -11,215 +11,142 @@ body{
     min-height: 100vh;
     background: linear-gradient(#03a9f4,#03a9f4 45%,#fff 45%,#fff 100%);
 }
-.sidebar{
-    width: 10%;
-}
-.sidebar ul li{
-    list-style: none;
+.navigation {
     position: relative;
+    top: -200px;
     width: 100%;
-    margin: 0  5px;
-    height: 3rem;
-    line-height: 50px;
-    border-radius: 12px;
-}
-.sidebar ul li a{
-    text-decoration: none;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    transition: all 0,4s ease;
-    border-radius: 12px;
-    white-space: nowrap;
-}
-body{
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
-}
-.sidebar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 78px;
-    background: #11101d;
-    padding: 6px 14px;
-    transition: all 0.5s ease;
-}
-.sidebar:active{
-    width: 200px;
-}
-
-.sidebar .log_content .log{
-    color: #fff;
-    display: flex;
-    height: 50px;
-    width: 100%;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.sidebar:active .log_content .log{
- opacity: 1;
- pointer-events: none;
-}
-.sidebar .log_content .log i{
-    font-size: 25px;
-    margin-right: 10px;
-}
-.sidebar #btn{
-    position: absolute;
-    color: #fff;
-    left: 50%;
-    top: 0.6rem;
-    font-size: 20px;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    transform: translateX(-50px);
-}
-.sidebar:active #btn{
-    left: 90%;
-}
-.sidebar ul li .tooltip{
-    color: black;
-    font-weight: 10;
-    position: absolute;
-    left: 65px;
-    background: #fff;
-    top: 0;
-    height: 35px;
-    width: 70px;
-    transform: translateY(-50%,-50%);
-    border-radius: 6px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    line-height: 35px;
-    text-align: center;
-    transition: 0s;
-    /* /////hide opacity: 0;////// */
-    opacity: 0;
-    pointer-events: none;
-    display: block;
-}
-.sidebar.active ul li .tooltip{
-    display: none;
-}
-.sidebar ul li:hover .tooltip{
-    top: 50%;
-    transition: all 0.5s ease;
-    opacity: 1;
-    
-}
-
-.sidebar ul li i{
-    height: 50px;
-    min-width: 50px;
-    border-radius: 12px;
-    line-height: 50px;
-    text-align: center;
-}
-.sidebar ul li a:hover{
-    color: #11101d;
-    background-color: #fff;
-}
-.sidebar .links_name{
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.5s ease;
-}
-.sidebar:active .links_name{
-    opacity: 1;
-    pointer-events: auto;
-}
-.sidebar ul li input{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 12px;
-    outline: none;
-    border: none;
-    background-color: #1d1b31;
-    padding-left: 50px;
-    font-size: 18px;
-    color: #fff;
-}
-#btn2{
-    position: absolute;
-    top: 0;
-    z-index: 99;
-    color: #fff;
-    font-size: 22px;
-    transition: all 0.4s ease;
-}
-.sidebar ul li #btn2:hover{
-    background: #fff;
-    color: #1d1b31;
-
-
-}
-.sidebar .profile_content{
-    position: absolute;
-    color: #fff;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-.sidebar .profile_content .profile{
-    position: relative;
-    padding: 10px 6px;
     height: 60px;
-    background-color: #1d1b31;
-}
-img{
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-.sidebar .profile_content .profile .profile_details{
+    background: #fff;
     display: flex;
+    justify-content: center;
     align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    white-space: nowrap;
+    border-radius: 10px;
 }
-.sidebar:active  .profile .profile_details{
-    opacity: 1;
-    pointer-events: auto;
+
+.navigation ul {
+    display: flex;
+    text-transform: capitalize;
 }
-.sidebar .profile_content .profile .profilr_details .jobbar{
-    margin-left: 10px;
+
+.navigation ul li {
+    margin-left: -15px;
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 60px;
+    z-index: 2;
 }
-.profile .profilr_details .jobbar .name{
-    font-size: 15px;
-    font-weight: 400;
-}
-.profile .profilr_details .jobbar .jobname{
-    font-size: 12px;
-}
-#log_out{
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    min-width: 50px;
-    line-height: 50px;
-    font-size: 22px;
-    border-radius: 12px;
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
     text-align: center;
 }
-.sidebar:active #log_out{
-    left: 88%;
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 65px;
+    font-size: 1.5em;
+    transition: 0.5s;
+    color: #222327;
+    transition: 0.5s;
 }
-.sidebar:active ~ .home{
-    width: calc(100%-240px);
-    left: 240px;
+.navigation ul li a .icon:hover ~ .indicator{
+    background: black;
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(-30px);
+    color: #2196f3;
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(15px);
+    background: #2196f3;
+    padding: 2px 7px;
+    border-radius: 12px;
+}
+
+.navigation ul li.active a .text {
+    transform: translateY(-4px);
+    opacity: 1;
+}
+
+.indicator {
+    position: absolute;
+    top: -35px;
+    
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.indicator::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -25px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 15px 18px #fff
+}
+
+.indicator::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -28px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -15px 18px #fff
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(10px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(40px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(45px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(50px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+    transform: translateX(calc(50px * 4));
+    transition: 0.5s;
+}
+.navigation ul li:nth-child(6).active ~ .indicator {
+    transform: translateX(calc(64px * 4));
+}
+.navigation ul li:nth-child(7).active ~ .indicator {
+    transform: translateX(calc(78px * 4));
+}
+.navigation ul li:nth-child(8).active ~ .indicator {
+    transform: translateX(calc(92px * 4));
 }
 /* ////////////////////////////////Dark mode/////////////////////////////////// */
 .them{
@@ -315,15 +242,18 @@ body.night{
 .card{
     margin: auto;
     position: relative;
+    padding: 1%;
     width: 400px;
     height: 400px;
     color: #fff;
     border-radius: 10px;
+    /* background: red; */
     background: rgba(255,255,255,0.1);
     border-top: 1px solid rgba(255,255,255,0.5);
     backdrop-filter: blur(10px);
     box-shadow: 0 15px 25px rgba(0,0,0,0.1);
-    left: 50px;
+    left: -50%;
+    top: 100px;
 }
 .card .img1{
     position: absolute;
