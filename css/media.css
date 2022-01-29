@@ -3,12 +3,12 @@
         background-color: red;
     }
     .navigation{
-        left: 30px;
+        left: 5%;
     }
     .card{
         width: 250px;
         padding: 30%;
-        left: -200px;
+        margin: auto;
     }
     .content{
     color: #11101d;
