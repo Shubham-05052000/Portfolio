@@ -12,6 +12,8 @@ body{
     background: linear-gradient(#03a9f4,#03a9f4 45%,#fff 45%,#fff 100%);
 }
 .navigation {
+    border: 1px solid red;
+    padding: 20px 20px;
     position: relative;
     top: -200px;
     width: 100%;
